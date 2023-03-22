@@ -1,3 +1,15 @@
+@import url("http://fonts.googleapis.com/css?family=Inter:400.700,800");
+//PRIMARY COLOURS
+$softOrange: hsl(35, 77%, 62%);
+$softRed: hsl(5, 85%, 63%);
+//NEUTRAL COLOURS
+$offWhite: hsl(36, 100%, 99%);
+$grayishBlue: hsl(233, 8%, 79%);
+$darkGrayishBlue: hsl(236, 13%, 42%);
+$veryDarkBlue: hsl(240, 100%, 5%);
+//FONTS
+$fontSizeP: 0.938rem;
+
 *{
     margin: 0;
     padding: 0;
@@ -8,6 +20,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: "Inter";
 }
 
 .page-container{
