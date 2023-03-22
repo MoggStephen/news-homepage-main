@@ -11,6 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: "Inter";
+  background: hsl(36, 100%, 99%);
 }
 
 .page-container {
@@ -21,10 +22,14 @@ body {
   height: 50.313rem;
   margin: 3.5rem 0 0 0;
   /*ITEM CONTAINERS*/
+  /* HEADER CONTAINER */
+  /* IMAGE CONTAINER */
+  /* BRIGHT FUTURE SECTION */
+  /* NEW ARTICLES SECTION */
+  /* TOP ARTICLES SECTION */
 }
 .page-container .item:nth-of-type(1) {
   grid-column-end: span 3;
-  /*HEADER CONTAINER*/
 }
 .page-container .item:nth-of-type(1) .header-container {
   display: flex;
@@ -36,6 +41,8 @@ body {
 }
 .page-container .item:nth-of-type(1) .header-container .links .link {
   padding: 1rem;
+  color: hsl(236, 13%, 42%);
+  font-weight: 400;
 }
 .page-container .item:nth-of-type(2) {
   grid-column-end: span 2;
@@ -45,14 +52,83 @@ body {
 .page-container .item:nth-of-type(3) {
   grid-row-start: 3;
   grid-column-end: span 2;
+  display: flex;
+  justify-content: space-between;
+}
+.page-container .item:nth-of-type(3) h1 {
+  width: 40%;
+  font-weight: 900;
+  color: hsl(240, 100%, 5%);
+  font-size: 3.25rem;
+  line-height: 3.5rem;
+}
+.page-container .item:nth-of-type(3) div {
+  display: flex;
+  flex-direction: column;
+  width: 46%;
+}
+.page-container .item:nth-of-type(3) div p {
+  font-size: 0.938rem;
+  font-weight: 400;
+  color: hsl(236, 13%, 42%);
+}
+.page-container .item:nth-of-type(3) div a {
+  margin: auto auto 1.5rem 0;
+  padding: 1rem 2.188rem;
+  background: hsl(5, 85%, 63%);
+  width: -moz-fit-content;
+  width: fit-content;
+  color: hsl(36, 100%, 99%);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.3rem;
 }
 .page-container .item:nth-of-type(4) {
   grid-row-end: span 2;
+  background-color: hsl(240, 100%, 5%);
+  color: white;
+  padding: 1.688rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.page-container .item:nth-of-type(4) h2 {
+  color: hsl(35, 77%, 62%);
+  font-size: 2.4rem;
+  font-weight: 900;
+}
+.page-container .item:nth-of-type(4) div h3 {
+  margin: 0 0 0.75rem 0;
+  font-weight: 800;
+}
+.page-container .item:nth-of-type(4) div p {
+  color: hsl(233, 8%, 79%);
+  line-height: 1.75rem;
+  font-size: 0.938rem;
+  font-weight: 400;
+}
+.page-container .item:nth-of-type(4) hr {
+  height: 1px;
+  background-color: hsla(233, 8%, 79%, 0.5);
+  border: none;
 }
 .page-container .item:nth-of-type(5) {
   grid-column-end: span 3;
-  /*FOOTER CONTAINER*/
+  display: flex;
 }
+.page-container .item:nth-of-type(5) img {
+  width: 6.25rem;
+  height: 7.813rem;
+}
+.page-container .item:nth-of-type(5) .content-container {
+  display: flex;
+}
+.page-container .item:nth-of-type(5) .content-container .text-container {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 1300px) {
   .page-container {
     grid-template: 3.75rem 18.75rem 19.375rem 30.625rem 28.125rem/1fr;
