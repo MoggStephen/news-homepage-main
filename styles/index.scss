@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-container{
+    display: grid;
+    grid-template: 5rem 18.75rem 11.875rem 8.125rem / 1fr 1fr 1fr;
+    gap: 1.875rem;
+
+    width: 69.375rem;
+    height: 50.313rem;
+
+    margin: 3.5rem 0 0 0;
+
+    /*ITEM CONTAINERS*/
+    .item{
+    }
+    .item:nth-of-type(1) {
+        grid-column-end: span 3;
+        /*HEADER CONTAINER*/
+        .header-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .logo{
+
+            }
+            .links{
+                margin-left: auto;
+                .link{
+                    padding: 1rem;
+                }   
+            }
+        }
+    }
+    .item:nth-of-type(2) {
+        grid-column-end: span 2;
+        background-image: url("../assets/images/image-web-3-desktop.jpg");
+        background-size: cover;
+    }
+    .item:nth-of-type(3) {
+        grid-row-start: 3;
+        grid-column-end: span 2;
+    }
+    .item:nth-of-type(4) {
+       grid-row-end: span 2;
+    }
+    .item:nth-of-type(5) {
+        grid-column-end: span 3;
+        /*FOOTER CONTAINER*/
+        .footer-container{
+
+        }
+    }    
+}
+
+
+@media (max-width: 1300px) {
+    .page-container{
+        grid-template: 3.75rem 18.75rem 19.375rem 30.625rem 28.125rem / 1fr;
+
+        width: 21.563rem;
+        gap: 4.063rem;
+
+        .item:nth-of-type(1) {
+            grid-column-end: auto;
+            /*HEADER CONTAINER*/
+            .header-container{
+    
+            }
+        }
+        .item:nth-of-type(2) {
+            grid-column-end: auto;
+        }
+        .item:nth-of-type(3) {
+            grid-row-start: auto;
+            grid-column-end: auto;
+        }
+        .item:nth-of-type(4) {
+           grid-row-end: auto;
+        }
+        .item:nth-of-type(5) {
+            grid-column-end: auto;
+            /*FOOTER CONTAINER*/
+            .footer-container{
+    
+            }
+        } 
+    }
+}
