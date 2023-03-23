@@ -31,18 +31,29 @@ body {
 .page-container .item1 {
   grid-column-end: span 3;
 }
-.page-container .item1 .header-container {
+.page-container .item1 .header-container .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.page-container .item1 .header-container .links {
+.page-container .item1 .header-container .navbar .burger-dropdown {
+  display: none;
+}
+.page-container .item1 .header-container .navbar .links-container {
   margin-left: auto;
 }
-.page-container .item1 .header-container .links .link {
+.page-container .item1 .header-container .navbar .links-container .link {
   padding: 1rem;
   color: hsl(236, 13%, 42%);
   font-weight: 400;
+  text-decoration: none;
+}
+.page-container .item1 .header-container .navbar .links-container .link:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+}
+.page-container .item1 .header-container .navbar .links-container .link:focus {
+  color: hsl(5, 85%, 63%);
 }
 .page-container .item2 {
   grid-row-start: 2;
@@ -80,10 +91,17 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   color: hsl(36, 100%, 99%);
-  text-decoration: none;
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 0.3rem;
+  text-decoration: none;
+}
+.page-container .item3 article a:hover {
+  background: hsl(240, 100%, 5%);
+  cursor: pointer;
+}
+.page-container .item3 article a:focus {
+  background: hsl(240, 100%, 5%);
 }
 .page-container .item4 {
   grid-column-start: 3;
@@ -102,7 +120,18 @@ body {
 }
 .page-container .item4 article h3 {
   margin: 0 0 0.75rem 0;
+}
+.page-container .item4 article h3 a {
+  color: hsl(36, 100%, 99%);
   font-weight: 800;
+  text-decoration: none;
+}
+.page-container .item4 article h3 a:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+.page-container .item4 article h3 a:focus {
+  color: hsl(35, 77%, 62%);
 }
 .page-container .item4 article p {
   color: hsl(233, 8%, 79%);
@@ -134,10 +163,18 @@ body {
   font-weight: 800;
   font-size: 1.75rem;
 }
-.page-container .item5 .article-container .text-container h2 {
+.page-container .item5 .article-container .text-container h2 a {
   color: hsl(240, 100%, 5%);
   font-weight: 800;
   font-size: 1.1rem;
+  text-decoration: none;
+}
+.page-container .item5 .article-container .text-container h2 a:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+}
+.page-container .item5 .article-container .text-container h2 a:focus {
+  color: hsl(5, 85%, 63%);
 }
 .page-container .item5 .article-container .text-container p {
   color: hsl(236, 13%, 42%);
@@ -147,26 +184,128 @@ body {
 
 @media (max-width: 1300px) {
   .page-container {
+    margin: 1rem 0 5rem 0;
     grid-template: 3.75rem 18.75rem 19.375rem 30.625rem 28.125rem/1fr;
     width: 21.563rem;
+    height: -moz-fit-content;
+    height: fit-content;
     gap: 4.063rem;
+    /* IMAGE CONTAINER */
+    /* BRIGHT FUTURE SECTION */
+    /* NEW ARTICLES SECTION */
+    /* TOP ARTICLES SECTION */
   }
-  .page-container .item:nth-of-type(1) {
-    grid-column-end: auto;
+  .page-container .item1 {
+    grid-area: auto/auto/auto/auto;
+    width: 100%;
     /*HEADER CONTAINER*/
   }
-  .page-container .item:nth-of-type(2) {
-    grid-column-end: auto;
+  .page-container .item1 .header-container {
+    height: 100%;
   }
-  .page-container .item:nth-of-type(3) {
-    grid-row-start: auto;
-    grid-column-end: auto;
+  .page-container .item1 .header-container .navbar {
+    height: 100%;
+    justify-content: space-between;
   }
-  .page-container .item:nth-of-type(4) {
-    grid-row-end: auto;
+  .page-container .item1 .header-container .navbar .logo {
+    width: 3rem;
   }
-  .page-container .item:nth-of-type(5) {
-    grid-column-end: auto;
-    /*FOOTER CONTAINER*/
+  .page-container .item1 .header-container .navbar .burger-dropdown {
+    display: block;
+    cursor: pointer;
+  }
+  .page-container .item1 .header-container .navbar .burger-dropdown-active {
+    cursor: pointer;
+    display: block;
+    position: static;
+    z-index: 3;
+    opacity: 1;
+  }
+  .page-container .item1 .header-container .navbar .links-container {
+    display: none;
+  }
+  .page-container .item1 .header-container .navbar .links-container-active {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    width: 70%;
+    height: 100%;
+    padding: 9rem 0.5rem;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  .page-container .item1 .header-container .navbar .links-container-active .link {
+    padding: 1rem;
+    color: hsl(236, 13%, 42%);
+    font-weight: 400;
+    text-decoration: none;
+  }
+  .page-container .item1 .header-container .navbar .links-container-active .link:hover {
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+  }
+  .page-container .item1 .header-container .navbar .links-container-active .link:focus {
+    color: hsl(5, 85%, 63%);
+  }
+  .page-container .item2 {
+    grid-area: auto/auto/auto/auto;
+    background-image: url("../assets/images/image-web-3-mobile.jpg");
+    margin: -2rem 0 0 0;
+  }
+  .page-container .item3 {
+    grid-area: auto/auto/auto/auto;
+    flex-direction: column;
+    margin: -2rem 0 0 0;
+  }
+  .page-container .item3 h1 {
+    font-size: 2.6rem;
+    line-height: 2.75rem;
+    width: 100%;
+  }
+  .page-container .item3 article {
+    width: 100%;
+  }
+  .page-container .item3 article p {
+    margin: 0 0 2.25rem 0;
+    line-height: 1.5rem;
+  }
+  .page-container .item3 article a {
+    margin: auto 0 auto 0;
+  }
+  .page-container .item4 {
+    grid-area: auto/auto/auto/auto;
+  }
+  .page-container .item5 {
+    grid-area: auto/auto/auto/auto;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .page-container .item5 .article-container {
+    width: 100%;
+  }
+  .page-container .item5 .article-container img {
+    height: 8.125rem;
+  }
+  .page-container .item5 .article-container .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .page-container .item5 .article-container .text-container p {
+    line-height: 1.5rem;
+  }
+  .overlay-none {
+    display: none;
+  }
+  .overlay-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
   }
 }/*# sourceMappingURL=index.css.map */
