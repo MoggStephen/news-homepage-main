@@ -28,51 +28,52 @@ body {
   /* NEW ARTICLES SECTION */
   /* TOP ARTICLES SECTION */
 }
-.page-container .item:nth-of-type(1) {
+.page-container .item1 {
   grid-column-end: span 3;
 }
-.page-container .item:nth-of-type(1) .header-container {
+.page-container .item1 .header-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.page-container .item:nth-of-type(1) .header-container .links {
+.page-container .item1 .header-container .links {
   margin-left: auto;
 }
-.page-container .item:nth-of-type(1) .header-container .links .link {
+.page-container .item1 .header-container .links .link {
   padding: 1rem;
   color: hsl(236, 13%, 42%);
   font-weight: 400;
 }
-.page-container .item:nth-of-type(2) {
+.page-container .item2 {
+  grid-row-start: 2;
   grid-column-end: span 2;
   background-image: url("../assets/images/image-web-3-desktop.jpg");
   background-size: cover;
 }
-.page-container .item:nth-of-type(3) {
+.page-container .item3 {
   grid-row-start: 3;
   grid-column-end: span 2;
   display: flex;
   justify-content: space-between;
 }
-.page-container .item:nth-of-type(3) h1 {
+.page-container .item3 h1 {
   width: 40%;
   font-weight: 900;
   color: hsl(240, 100%, 5%);
   font-size: 3.25rem;
   line-height: 3.5rem;
 }
-.page-container .item:nth-of-type(3) div {
+.page-container .item3 article {
   display: flex;
   flex-direction: column;
   width: 46%;
 }
-.page-container .item:nth-of-type(3) div p {
+.page-container .item3 article p {
   font-size: 0.938rem;
   font-weight: 400;
   color: hsl(236, 13%, 42%);
 }
-.page-container .item:nth-of-type(3) div a {
+.page-container .item3 article a {
   margin: auto auto 1.5rem 0;
   padding: 1rem 2.188rem;
   background: hsl(5, 85%, 63%);
@@ -84,7 +85,8 @@ body {
   font-weight: 800;
   letter-spacing: 0.3rem;
 }
-.page-container .item:nth-of-type(4) {
+.page-container .item4 {
+  grid-column-start: 3;
   grid-row-end: span 2;
   background-color: hsl(240, 100%, 5%);
   color: white;
@@ -93,40 +95,54 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.page-container .item:nth-of-type(4) h2 {
+.page-container .item4 h2 {
   color: hsl(35, 77%, 62%);
   font-size: 2.4rem;
   font-weight: 900;
 }
-.page-container .item:nth-of-type(4) div h3 {
+.page-container .item4 article h3 {
   margin: 0 0 0.75rem 0;
   font-weight: 800;
 }
-.page-container .item:nth-of-type(4) div p {
+.page-container .item4 article p {
   color: hsl(233, 8%, 79%);
   line-height: 1.75rem;
   font-size: 0.938rem;
   font-weight: 400;
 }
-.page-container .item:nth-of-type(4) hr {
+.page-container .item4 hr {
   height: 1px;
   background-color: hsla(233, 8%, 79%, 0.5);
   border: none;
 }
-.page-container .item:nth-of-type(5) {
+.page-container .item5 {
   grid-column-end: span 3;
   display: flex;
 }
-.page-container .item:nth-of-type(5) img {
+.page-container .item5 img {
   width: 6.25rem;
   height: 7.813rem;
+  margin: 0 1.75rem 0 0;
 }
-.page-container .item:nth-of-type(5) .content-container {
+.page-container .item5 .article-container {
   display: flex;
+  width: 33%;
+  margin: 0 1rem 0 0;
 }
-.page-container .item:nth-of-type(5) .content-container .text-container {
-  display: flex;
-  flex-direction: column;
+.page-container .item5 .article-container .text-container h1 {
+  color: hsl(233, 8%, 79%);
+  font-weight: 800;
+  font-size: 1.75rem;
+}
+.page-container .item5 .article-container .text-container h2 {
+  color: hsl(240, 100%, 5%);
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+.page-container .item5 .article-container .text-container p {
+  color: hsl(236, 13%, 42%);
+  font-size: 0.938rem;
+  font-weight: 400;
 }
 
 @media (max-width: 1300px) {
