@@ -14,6 +14,7 @@ $weightMedium: 800;
 $weightLarge: 900;
 
 *{
+    /* BOILERPLATE STYLES */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -31,27 +32,17 @@ body{
     display: grid;
     grid-template: 5rem 18.75rem 11.875rem 8.125rem / 1fr 1fr 1fr;
     gap: 1.875rem;
-
     width: 69.375rem;
     height: 50.313rem;
-
     margin: 3.5rem 0 0 0;
-
-    /*ITEM CONTAINERS*/
-    .item{
-    }
-    
-    /* HEADER CONTAINER */
     .item1 {
+        /* HEADER SECTION STYLES: */
         grid-column-end: span 3;
         .header-container{
             .navbar{    
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                .logo{ 
-
-                }
                 .burger-dropdown{
                     display: none;
                 }
@@ -61,7 +52,6 @@ body{
                         padding: 1rem;
                         color: $darkGrayishBlue;
                         font-weight: $weightSmall;
-    
                         text-decoration: none;
                         &:hover{
                             color: $softRed;
@@ -72,26 +62,24 @@ body{
                         }
                     }
                 }
-            }
-            
+            } 
         }
     }
 
-    /* IMAGE CONTAINER */
     .item2 {
+        /* IMAGE SECTION STYLES: */
         grid-row-start: 2;
         grid-column-end: span 2;
         background-image: url("../assets/images/image-web-3-desktop.jpg");
         background-size: cover;
     }
 
-    /* BRIGHT FUTURE SECTION */
     .item3 {
+        /* BRIGHT FUTURE SECTION STYLES: */
         grid-row-start: 3;
         grid-column-end: span 2;
         display: flex;
         justify-content: space-between;
-
         h1{
             width: 40%;
             font-weight: $weightLarge;
@@ -116,8 +104,7 @@ body{
                 color: $offWhite;
                 font-size: 0.8rem;
                 font-weight: $weightMedium;
-                letter-spacing: 0.3rem;
-                
+                letter-spacing: 0.3rem;      
                 text-decoration: none;
                     &:hover{
                         background: $veryDarkBlue;
@@ -131,12 +118,11 @@ body{
 
     }
 
-    /* NEW ARTICLES SECTION */
     .item4{
+        /* NEW ARTICLES SECTION STYLES: */
         grid-column-start: 3;
         grid-row-end: span 2;
         background-color: $veryDarkBlue;
-
         color: white;
         padding: 1.688rem;
         display: flex;
@@ -153,7 +139,6 @@ body{
                 a{
                     color: $offWhite;
                     font-weight: $weightMedium;
-
                     text-decoration: none;
                     &:hover{
                         color: $softOrange;
@@ -178,8 +163,8 @@ body{
         }
     }
 
-    /* TOP ARTICLES SECTION */
     .item5{
+        /* TOP ARTICLES SECTION STYLES: */
         grid-column-end: span 3;
         display: flex;
         img{
@@ -202,7 +187,6 @@ body{
                         color: $veryDarkBlue;
                         font-weight: $weightMedium;
                         font-size: 1.1rem;
-
                         text-decoration: none;
                         &:hover{
                             color: $softRed;
@@ -223,12 +207,11 @@ body{
     }    
 }
 
-
+/* MEDIA QUERY. DEVELOPED DESKTOP FIRST SO WE USE MAX-WIDTH */
 @media (max-width: 1300px) {
     .page-container{
         margin: 1rem 0 5rem 0;
         grid-template: 3.75rem 18.75rem 19.375rem 30.625rem 28.125rem / 1fr;
-
         width: 21.563rem;
         height: fit-content;
         gap: 4.063rem;
@@ -236,8 +219,8 @@ body{
         .item1 {
             grid-area: auto / auto / auto / auto;
             width: 100%;
-            /*HEADER CONTAINER*/
             .header-container{
+                /* HEADER SECTION STYLES: */
                 height: 100%;
                 .navbar{
                     height: 100%; 
@@ -255,6 +238,7 @@ body{
                         position: static;
                         z-index: 3;
                         opacity: 1;
+                        content: url("../assets/images/icon-menu-close.svg");
                     }
                     .links-container{
                         display:none;
@@ -266,7 +250,6 @@ body{
                         width: 70%;
                         height: 100%;
                         padding: 9rem 0.5rem;
-
                         z-index: 2;
                         position: fixed;
                         top: 0;
@@ -275,7 +258,6 @@ body{
                             padding: 1rem;
                             color: $darkGrayishBlue;
                             font-weight: $weightSmall;
-        
                             text-decoration: none;
                             &:hover{
                                 color: $softRed;
@@ -290,15 +272,15 @@ body{
             }
         }
 
-        /* IMAGE CONTAINER */
         .item2 {
+            /* IMAGE SECTION STYLES: */
             grid-area: auto / auto / auto / auto;
             background-image: url("../assets/images/image-web-3-mobile.jpg");
             margin: -2rem 0 0 0;
         }
 
-        /* BRIGHT FUTURE SECTION */
         .item3 {
+            /* BRIGHT FUTURE SECTION STYLES: */
             grid-area: auto / auto / auto / auto;
             flex-direction: column;
             margin: -2rem 0 0 0;
@@ -319,13 +301,13 @@ body{
             }
         }
 
-        /* NEW ARTICLES SECTION */
         .item4 {
+            /* NEW ARTICLES SECTION STYLES: */
             grid-area: auto / auto / auto / auto;
         }
 
-        /* TOP ARTICLES SECTION */
         .item5 {
+            /* TOP ARTICLES SECTION STYLES: */
             grid-area: auto / auto / auto / auto;
             flex-direction: column;
             justify-content: space-between;
@@ -347,6 +329,7 @@ body{
         } 
         
     }
+    /* OVERLAY STYLES: */
     .overlay-none{
         display: none;
     }

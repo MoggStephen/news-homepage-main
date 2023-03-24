@@ -13,7 +13,7 @@
 <body>
   <div class="page-container">
 
-    <!-- HEADER CONTAINER -->
+    <!-- HEADER SECTION -->
     <section class="item item1">
       <header class="header-container">
         <div class="navbar">
@@ -21,9 +21,9 @@
           <img src="./assets/images/icon-menu.svg" alt="Burger icon" class="burger-dropdown">        
           <nav class="links-container">
             <a href="#/" class="link">Home</a>
-            <a href="#/" class="link">New</a>
-            <a href="#/" class="link">Popular</a>
-            <a href="#/" class="link">Trending</a>
+            <a href="#new" class="link">New</a>
+            <a href="#popular" class="link">Popular</a>
+            <a href="#trending" class="link">Trending</a>
             <a href="#/" class="link">Categories</a>
           </nav> 
         </div>   
@@ -31,12 +31,10 @@
     </section>
 
     <!-- IMG SECTION -->
-    <section class="item item2">
-      
-    </section>
+    <section class="item item2"></section>
 
     <!-- BRIGHT FUTURE SECTION -->
-    <section class="item item3">
+    <section class="item item3" id="trending">
       <h1>The Bright Future of Web 3.0?</h1>
 
       <article>
@@ -46,8 +44,8 @@
         </article>
     </section>
 
-    <!-- NEW SECTION -->
-    <section class="item item4">
+    <!-- NEW ARTICLES SECTION -->
+    <section class="item item4" id="new">
       <h2>New</h2>
       <article>
         <h3><a href="#/">Hydrogen VS Electric Cars</a></h3>
@@ -66,7 +64,7 @@
     </section>
     
     <!-- TOP ARTICLES SECTION -->
-    <section class="item item5">
+    <section class="item item5" id="popular">
       <article class="article-container">
         <img src="./assets/images/image-retro-pcs.jpg" alt="">
         <div class="text-container">
@@ -93,6 +91,19 @@
       </article>
     </section>
   </div>
+
+  <!-- OVERLAY -->
   <div class="overlay-none"></div>
+
+  <!-- LINKS FOOTER -->
+  <footer style="position:fixed; bottom:0; width:100%; text-align:center; z-index:500;">
+    <a style="text-decoration:none; z-index:500;" target="_blank" href="https://www.frontendmentor.io/profile/MoggStephen">
+      <img src="./assets/footer/front-end-mentor-icon.png" alt="Frontend Mentor icon" width="25px">
+    </a>
+    <img style="margin:0 -8px; opacity:0.4; z-index:500;" src="./assets/footer/separator.png" alt="separator icon" width="25px">
+    <a style="text-decoration:none; z-index:500;" target="_blank" href="https://github.com/MoggStephen/">
+      <img src="./assets/footer/github-icon.png" alt="Github icon" width="25px">
+    </a>
+</footer>
 </body>
 </html>
